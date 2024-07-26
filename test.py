@@ -77,7 +77,7 @@ def main():
     st.title("Chat with AI")
 
     if 'chat_pipeline' not in st.session_state:
-        api_key = "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"  # Your Groq API key
+        api_key = st.secrets["groq"]["api_key"]  # Read the API key from Streamlit secrets
         model_name = 'llama3-70b-8192'
         st.session_state.chat_pipeline = ChatPipeline(api_key=api_key, model_name=model_name)
         st.session_state.chat_history = []
