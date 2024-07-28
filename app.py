@@ -6,6 +6,13 @@ import streamlit as st
 from groq import Groq
 from langchain.memory import ConversationBufferMemory
 
+# Page configuration
+st.set_page_config(
+    page_title="Fictional Character Chatbot",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
+
 try:
     with open('character-details.json', 'r', encoding='utf-8') as file:
         character_info = json.load(file)
@@ -74,7 +81,7 @@ def handle_enter_key_press():
 
 # Streamlit app
 def main():
-    st.title("Chat with AI")
+    st.title("Chat with Your Favorite Fictional Character")
 
     if 'chat_pipeline' not in st.session_state:
         api_key = st.secrets["groq"]["api_key"]  # Read the API key from Streamlit secrets
