@@ -13,6 +13,13 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
+# Load custom CSS for dark mode
+def load_css(file_name):
+    with open(file_name) as f:
+        st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+
+load_css("style.css")
+
 try:
     with open('character-details.json', 'r', encoding='utf-8') as file:
         character_info = json.load(file)

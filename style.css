@@ -1,0 +1,32 @@
+/* Set background and text colors for dark mode */
+body {
+    background-color: #2e2e2e;
+    color: white;
+}
+
+/* Customize the appearance of text input fields */
+input {
+    background-color: #333;
+    color: white;
+    border: 1px solid #555;
+}
+
+/* Customize the appearance of select boxes */
+select {
+    background-color: #333;
+    color: white;
+    border: 1px solid #555;
+}
+
+/* Customize the appearance of buttons */
+button {
+    background-color: #444;
+    color: white;
+    border: 1px solid #555;
+}
+
+/* Customize the appearance of markdown content */
+.markdown-text-container {
+    background-color: #2e2e2e;
+    color: white;
+}
