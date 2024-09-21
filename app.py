@@ -39,7 +39,7 @@ class ChatMessage:
         return {"role": self.role, "content": self.content}
 
 class ChatPipeline:
-    def __init__(self, api_key, model_name='llama3-70b-8192'):
+    def __init__(self, api_key, model_name='llama-3.1-70b-versatile'):
         self.client = Groq(api_key=api_key)
         self.model_name = model_name
         self.memory = ConversationBufferMemory()
